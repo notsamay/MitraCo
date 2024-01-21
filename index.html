@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Single Page Site</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+      background-color: #0F0326;
+      color: #fff;
+    }
+
+    nav {
+      background-color: #090215;
+      padding: 10px;
+      text-align: center;
+      height: 3vw;
+      display: flex;
+      align-items: center;
+      position: fixed;
+      width: 100vw;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the nav bar */
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      padding-left: 20px;
+    }
+
+    .green-square {
+      background-color: #9499ff;
+      width: 3vw;  /* Adjust the width to your preference */
+      height: 3vw; /* Ensure the height is the same as the width for a square */
+    }
+
+    .green-square a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .mitra-text {
+      text-transform: uppercase;
+      font-weight: bolder;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px;
+      margin: 0 15px;
+      cursor: pointer;
+      font-weight: 100;
+      padding-right: 7vw;
+      letter-spacing: 0.2vw;
+      text-transform: uppercase;
+    }
+
+    #home {
+      height: 90vh;
+      padding: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; /* Align to the left */
+      background-color: #0F0326;
+    }
+
+    #home h1 {
+      text-align: left;
+      font-size: 6em;
+      color: #fff;
+      margin-bottom: 6vh;
+      line-height: 15vh;
+    }
+
+    #get-started-button {
+      background-color: #addec6;
+      color: #fff;
+      padding: 2vw 5vw;
+      font-size: 1.65em;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.3vw;
+      font-weight: 500;
+      border-radius: 5px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the button */
+    }
+    #port {
+      background-color: #addec6;
+      color: #fff;
+      padding: 2vw 2vw;
+      font-size: 1.25em;
+      border: none;
+      cursor: pointer;
+      letter-spacing: 0.15vw;
+      font-weight: 500;
+      border-radius: 5px; /* Rounded corners */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow to the button */
+    }
+
+    #about h1 {
+      text-align: left;
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 6vh;
+    }
+
+    #about p {
+      color: #211c26;
+      font-size: 1.5rem;
+      line-height: 5vh;
+    }
+
+    .txtdvd {
+      width: 45vw;
+    }
+
+    #WWD {
+      height: 70vh;
+      width: 100vw;
+      background-color: #0F0326;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    #Quote {
+      height: 30vh;
+      width: 100vw;
+      background-color: #0F0326;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+
+    #WWD h2 {
+      color: #fff;
+      font-size: 2.5em;
+      margin-bottom: 3vh;
+      letter-spacing: 0.4vw;
+      margin-bottom: 5vw;
+    }
+    #WWD h4 {
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: 0.1vw;
+     
+    
+      
+    }
+    #WWD p {
+      color: #fff;
+      letter-spacing: 0.05vw;
+     font-weight: lighter;
+     font-size: 1rem;
+
+      
+    }
+
+    .icon-row {
+    display: flex;
+     justify-content: center;
+     margin-top: 2vh; 
+     width: 100vw; 
+}
+
+    .portdiv{
+        width: 40vw;
+    }
+    .icon {
+      text-align: center;
+      color: #9499ff;
+    }
+
+    .icon img {
+      width: 10vw; /* Adjust the icon size as needed */
+      margin-left: 8vw;
+      margin-right: 8vw;
+    
+      margin-bottom: 1vh;
+    }
+    #portfolio{
+        background-color: #ececec;
+        height: 80vh;
+       
+    }
+    #careers{
+        background-color: #fefff7;
+        height: 80vh;
+       
+    }
+    .portdiv h2 {
+      color: #9499ff;
+      font-size: 2.5em;
+      margin-bottom: 5vh;
+    }
+
+    .portdiv p {
+      color: #211c26;
+      font-size: 1.5em;
+      margin-bottom: 5vh;
+    }
+
+    section {
+      height: 100vh;
+      padding: 50px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start; /* Align to the left */
+      background-color: #fefff7;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">
+      <div class="green-square">
+        <a href="#home"></a>
+      </div>
+      <div class="mitra-text">
+        <a href="#home">MITRA</a>
+      </div>
+    </div>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#WWD">Services</a>
+    <a href="#careers">Careers</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <section id="home">
+    <h1>SOFTWARE <br>OUTSOURCING <br> <span style="color: #9499ff;">EXPERTS</span></h1>
+
+  </section>
+
+  <section id="about">
+    <h1> <span style="color: #9499ff;">ABOUT US</span></h1>
+    <div class="txtdvd">
+      <p>Kale chips knausgaard mustache blog fashion axe selfies salvia. Gluten-free post-ironic deep v typewriter. Cloud bread flannel poke, flexitarian vinyl iPhone church-key shaman williamsburg kitsch beard. Organic seitan quinoa tumblr, brooklyn hammock tofu tattooed pork belly glossier lo-fi fam selvage. Succulents post-ironic distillery four loko.</p>
+    </div>
+  </section>
+
+  <section id="WWD">
+    <h2>What We Do</h2>
+    <div class="icon-row">
+      <div class="icon">
+        <img src="mobile-icon.png" alt="Mobile Development Icon">
+        <h4>Mobile Development</h4>
+        <p>Experience in mobile application <br>development.</p>
+      </div>
+      <div class="icon">
+        <img src="web-icon.png" alt="Web Development Icon">
+        <h4>Web Development</h4>
+        <p>From start to finish, a beautiful website.</p>
+      </div>
+      <div class="icon">
+        <img src="code-icon.png" alt="Code Review Icon">
+        <h4>Code Review</h4>
+        <p>Expert advise for consistent and secure <br>code.</p>
+       
+      </div>
+    </div>
+  </section>
+  <section id="careers">
+    <div class = "portdiv">
+        <h2>WE KICK START CAREERS</h2>
+        <p>Fashion is a popular aesthetic expression in a certain time and context, especially in clothing, footwear, lifestyle, accessories, makeup, hairstyle and body proportions.</p>
+        <button id="port">VIEW CAREERS</button>
+    </div>
+    </section>
+  <section id="portfolio">
+    <div class = "portdiv">
+        <h2>AND CREATE DIGITAL SUCESS STORIES</h2>
+        <p>Fashion is a popular aesthetic expression in a certain time and context, especially in clothing, footwear, lifestyle, accessories, makeup, hairstyle and body proportions.</p>
+        <button id="port">VIEW PORTFOLIO</button>
+    </div>
+    
+  </section>
+  <section id="Quote">
+    <div class="quote">
+    <h4>I am impressed with the professionalism and exectution of the project by this team. Highly efficient, easy to communicate with and definitely know their craft. Thanks for an incredible result.</h4>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Section</h2>
+    <p>This is the contact section of your single-page site.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Your Company</p>
+  </footer>
+
+</body>
+</html>
